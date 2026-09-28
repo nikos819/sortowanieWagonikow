@@ -1,10 +1,12 @@
-Sortowanie Wagoników
-Program w języku C++ służący do wczytywania, sortowania, wyświetlania oraz zapisywania liczb.
+# Sortowanie Wagoników
 
-Projekt wykorzystuje listę jednokierunkową oraz sortowanie bąbelkowe z zamianą elementów poprzez przepinanie wskaźników.
+Program napisany w języku C++, służący do wczytywania, sortowania, wyświetlania oraz zapisywania liczb.
 
-Działanie programu
-Po uruchomieniu pojawia się menu:
+Projekt wykorzystuje **listę jednokierunkową** oraz **sortowanie bąbelkowe** z przepinaniem wskaźników.
+
+## Działanie programu
+
+Po uruchomieniu programu wyświetla się menu:
 
 1 - wczytaj
 2 - sortuj
@@ -12,49 +14,54 @@ Po uruchomieniu pojawia się menu:
 4 - zapisz
 0 - wyjście
 
-Użytkownik może wykonywać poszczególne operacje w dowolnej kolejności.
+Program pozwala wykonywać operacje wielokrotnie, aż użytkownik wybierze opcję `0`.
 
-Wczytywanie
-Opcja 1 wczytuje liczby z pliku:
+## Wczytywanie danych
 
-a.txt
+Opcja `1` pozwala wczytać liczby z pliku `a.txt`.
 
-Każda liczba jest zapisywana w osobnym elemencie listy.
-
-Przykładowe dane:
+Przykładowa zawartość pliku:
 
 8 3 6 1 9 2 5
 
-Lista w pamięci wygląda wtedy następująco:
+Po wczytaniu dane są przechowywane w postaci listy jednokierunkowej:
 
 8 -> 3 -> 6 -> 1 -> 9 -> 2 -> 5 -> NULL
 
-Sortowanie
-Opcja 2 uruchamia sortowanie bąbelkowe.
+## Sortowanie
 
-Elementy są porównywane ze sobą, a jeżeli znajdują się w złej kolejności, przepinane są ich wskaźniki.
+Opcja `2` uruchamia sortowanie bąbelkowe.
 
-Przykład:
+W przypadku znalezienia elementów w złej kolejności program przepina ich wskaźniki `next`.
 
-Przed:
+### Przykład
+
+Przed sortowaniem:
+
 8 -> 3 -> 6 -> 1 -> 9
 
-Po:
+Po sortowaniu:
+
 1 -> 3 -> 6 -> 8 -> 9
 
-Wyświetlanie
-Opcja 3 wyświetla wszystkie elementy znajdujące się aktualnie w liście.
+## Wyświetlanie danych
+
+Opcja `3` wyświetla wszystkie liczby znajdujące się aktualnie w liście.
 
 Przykład:
 
 1 3 6 8 9
 
-Zapisywanie
-Opcja 4 zapisuje aktualną zawartość listy do pliku:
+## Zapisywanie danych
 
-b.txt
+Opcja `4` zapisuje aktualne dane do pliku `b.txt`.
 
-Struktura danych
+Przykładowa zawartość pliku:
+
+1 3 6 8 9
+
+## Struktura danych
+
 Każdy element listy jest przechowywany w strukturze:
 
 struct _kolejka
@@ -63,38 +70,36 @@ struct _kolejka
     struct _kolejka *next;
 };
 
-a przechowuje liczbę, a next wskazuje na następny element listy.
+Pole `a` przechowuje liczbę, a `next` jest wskaźnikiem na następny element listy.
 
-Wykorzystane zagadnienia
-W projekcie zostały wykorzystane:
+## Wykorzystane zagadnienia
 
-klasy,
+- klasy
+- struktury
+- wskaźniki
+- lista jednokierunkowa
+- dynamiczna alokacja pamięci
+- `new` i `delete`
+- obsługa plików
+- `ifstream` i `ofstream`
+- pętle
+- instrukcja `switch`
+- sortowanie bąbelkowe
+- konstruktor
+- destruktor
 
-struktury,
+## Pliki
 
-wskaźniki,
+### a.txt
 
-lista jednokierunkowa,
+Plik zawierający dane wejściowe programu.
 
-dynamiczna alokacja pamięci,
+### b.txt
 
-new i delete,
+Plik, do którego zapisywane są dane po wykonaniu operacji zapisu.
 
-odczyt i zapis do plików,
+## Autor
 
-instrukcja switch,
-
-pętle,
-
-sortowanie bąbelkowe,
-
-konstruktor i destruktor.
-
-Pliki
-a.txt - dane wejściowe
-b.txt - dane wyjściowe
-
-Autor
-Nikodem Klatka
+**Nikodem Klatka**
 
 Projekt wykonany w języku C++.
